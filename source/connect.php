@@ -2,10 +2,10 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-$host = "localhost";
-$db   = "fitlife_db";
-$user = "root";
-$pass = "";
+$host = "sql310.infinityfree.com";
+$db   = "if0_39414725_fitlife_db";
+$user = "if0_39414725";
+$pass = "zHHWIZVfbwLqG";
 
 // Tạo kết nối (dùng đúng biến $host, $user, $pass, $db)
 $conn = new mysqli($host, $user, $pass, $db);
