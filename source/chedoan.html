@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chế độ ăn uống</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon_io/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon_io/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/favicon_io/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="img/favicon_io/android-chrome-512x512.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon_io/apple-touch-icon.png">
+    <link rel="stylesheet" href="chedoan.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" 
+    integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+</head>
+<body>
+    <section class="background">
+        <nav class="navbar">
+            <a href="#" class="logo"><img src="img/logo.png" alt=""></a>
+            <div class="burger" onclick="toggleMenu()">☰</div>
+            <div class="navbar-items h-class">
+                <ul class="nav v-class">
+                    <li><a href="index.html">TRANG CHỦ</a></li>
+                    <li><a href="chedoan.html">CHẾ ĐỘ ĂN</a></li>
+                    <li><a href="fitness.html">FITNESS</a></li>
+                    <li><a href="suckhoe.html">SỨC KHỎE<Em></Em></a></li>
+                    <li><a href="#contact">LIÊN HỆ</a></li>
+                    <li><a href="login.html" id="loginNav">ĐĂNG NHẬP</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- _________main-sec -->
+        <div class="main">
+            <div class="text-box">
+                <h1>Ăn uống khoa học Khởi đầu cho một cuộc sống khỏe mạnh</h1>
+                <p id="pmain">Trang Chế độ ăn của FitLife giúp bạn hiểu đúng về dinh dưỡng, lựa chọn thực đơn phù hợp 
+                và duy trì thói quen ăn uống lành mạnh mỗi ngày. Cùng khám phá và thay đổi từ hôm nay!</p>
+                <a href="#infor-more" class="btn btn1">Khám phá ngay</a>
+            </div>
+
+            <div class="box" id="image-slider">
+                <img src="img/chedoan/library/pic1.png" alt="Slide 1" id="sliderImg">
+            </div>
+        </div>
+    </section>
+
+    <section class="about hidden" id="infor-more">
+        <h1 class="heading">Tại sao phải ăn uống đầy đủ dinh dưỡng?</h1>
+        <div class="row row1">
+            <div class="left">
+                <img src="img/chedoan/pic1.png" alt="">
+            </div>
+            <div class="right">
+                <h1 id="aboutTyping"></h1>
+                <p>Một chế độ ăn uống đủ chất đóng vai trò vô cùng quan trọng trong việc duy trì sức khỏe và nâng cao chất lượng cuộc sống. Không chỉ cung cấp năng lượng cho các hoạt động hàng ngày, việc ăn uống hợp lý còn giúp cơ thể phát triển toàn diện, tăng cường sức đề kháng và phòng ngừa nhiều bệnh tật. Trong một xã hội hiện đại với nhiều lựa chọn thực phẩm như hiện nay, việc hiểu rõ tầm quan trọng của việc cân bằng dinh dưỡng trở thành một vấn đề cần thiết hơn bao giờ hết.</p>
+                <button class="btn btn3" onclick="window.open('https://www.parkwaycancercentre.com/vi/vn/news-events/news-articles/news-articles-details/tai-sao-ban-phai-an-du-duong-chat', '_blank')">Tìm hiểu thêm</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="bmi-section">
+        <h1 class="heading">Tính chỉ số BMI của bạn</h1>
+        <form id="bmi-form" class="bmi-form">
+            <div class="form-group">
+                <label for="height">Chiều cao (cm):</label>
+                <input type="number" id="height" name="height" placeholder="Nhập chiều cao của bạn" required>
+            </div>
+            <div class="form-group">
+                <label for="weight">Cân nặng (kg):</label>
+                <input type="number" id="weight" name="weight" placeholder="Nhập cân nặng của bạn" required>
+            </div>
+            <button type="submit" class="btn-submit">Tính BMI</button>
+        </form>
+        <div id="bmi-result" class="bmi-result"></div>
+        <a href="bmi_progress.php" target="_blank" class="view-progress-link">
+            📈 Xem thống kê BMI tuần này
+        </a>
+    </section>
+
+
+    <section class="menu hidden" id="daydudu">
+        <h1 class="heading">Xây dựng thực đơn đầy đủ dinh dưỡng</h1>
+
+        <!-- Nút chọn bữa -->
+        <div class="session-buttons">
+            <button class="meal-btn" data-meal="sang">Sáng</button>
+            <button class="meal-btn" data-meal="trua">Trưa</button>
+            <button class="meal-btn" data-meal="toi">Tối</button>
+        </div>
+
+        <!-- Nội dung chính -->
+        <div class="menu-content">
+            <!-- Bên trái: ảnh + nút điều hướng + tên món -->
+            <div class="menu-left">
+            <div class="image-container">
+                <img src="img/chedoan/sang/comtam.png" alt="Món ăn" id="meal-image">
+                <div class="image-controls">
+                    <button id="prev-btn">&lt;</button>
+                    <span id="dish-name">Cơm tấm</span>
+                    <button id="next-btn">&gt;</button>
+                </div>
+            </div>
+            </div>
+
+            <!-- Bên phải: mô tả theo bữa -->
+            <div class="menu-right">
+                <h2 id="meal-title">Bữa sáng dinh dưỡng để khởi đầu ngày mới</h2>
+                <p id="meal-description">
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="menu hiden" id="thua-can">
+        <h1 class="heading">Xây dựng thực đơn cho người giảm cân</h1>
+
+        <!-- Nút chọn bữa -->
+        <div class="session-buttons">
+            <button class="meal-btn" data-meal="sang">Sáng</button>
+            <button class="meal-btn" data-meal="trua">Trưa</button>
+            <button class="meal-btn" data-meal="toi">Tối</button>
+        </div>
+
+        <!-- Nội dung chính -->
+        <div class="menu-content">
+            <!-- Bên trái: ảnh + nút điều hướng + tên món -->
+            <div class="menu-left">
+            <div class="image-container">
+                <img src="img/thuacan/sang/coffee" alt="Món ăn" id="meal-image">
+                <div class="image-controls">
+                    <button id="prev-btn">&lt;</button>
+                    <span id="dish-name">Cà phê</span>
+                    <button id="next-btn">&gt;</button>
+                </div>
+            </div>
+            </div>
+
+            <!-- Bên phải: mô tả theo bữa -->
+            <div class="menu-right">
+                <h2 id="meal-title">Bữa sáng dinh dưỡng để khởi đầu ngày mới</h2>
+                <p id="meal-description">
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="menu hiden" id="thieucan">
+        <h1 class="heading">Xây dựng thực đơn cho người suy dinh dưỡng</h1>
+
+        <!-- Nút chọn bữa -->
+        <div class="session-buttons">
+            <button class="meal-btn" data-meal="sang">Sáng</button>
+            <button class="meal-btn" data-meal="trua">Trưa</button>
+            <button class="meal-btn" data-meal="toi">Tối</button>
+        </div>
+
+        <!-- Nội dung chính -->
+        <div class="menu-content">
+            <!-- Bên trái: ảnh + nút điều hướng + tên món -->
+            <div class="menu-left">
+            <div class="image-container">
+                <img src="img/thieucan/sang/bunbo.png" alt="Món ăn" id="meal-image">
+                <div class="image-controls">
+                    <button id="prev-btn">&lt;</button>
+                    <span id="dish-name"></span>
+                    <button id="next-btn">&gt;</button>
+                </div>
+            </div>
+            </div>
+
+            <!-- Bên phải: mô tả theo bữa -->
+            <div class="menu-right">
+                <h2 id="meal-title">Bữa sáng dinh dưỡng để khởi đầu ngày mới</h2>
+                <p id="meal-description">
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Các chất dinh dưỡng -->
+    <section class="nutrients-section hidden">
+        <h1 class="heading">Các chất dinh dưỡng cần thiết</h1>
+        <div class="nutrient-grid">
+            <a href="https://tamanhhospital.vn/thuc-an-chua-nhieu-tinh-bot/" class="nutrient-link" target="_blank" rel="noopener">
+                <div class="nutrient-box carb">
+                    <i class="fas fa-bread-slice"></i>
+                    <h2>Carbohydrate <br>(Đường bột)</h2>
+                    <p>Carbohydrate là nguồn năng lượng chính cho não và cơ bắp, giúp cơ thể hoạt động hiệu quả, duy trì sự tỉnh táo và ổn định đường huyết, khởi động mọi chức năng sống.</p>
+                </div>
+            </a>
+            <a href="https://www.vinmec.com/vie/bai-viet/20-thuc-pham-giau-protein-ngon-mieng-de-vi" class="nutrient-link" target="_blank" rel="noopener">
+                <div class="nutrient-box protein">
+                    <i class="fas fa-drumstick-bite"></i>
+                    <h2>Protein <br>(Chất đạm)</h2>
+                    <p>Protein xây dựng, sửa chữa mô cơ, tạo enzyme, hormone, kháng thể, tăng cường hệ miễn dịch và vận chuyển chất. Chúng thiết yếu cho mọi chức năng sống</p>
+                </div>
+            </a>
+            <a href="https://ifitness.vn/blogs/kien-thuc-the-hinh/thuc-pham-giau-chat-beo" class="nutrient-link" target="_blank" rel="noopener">
+                <div class="nutrient-box fat">
+                    <i class="fas fa-bacon"></i>
+                    <h2>Fat <br>(Chất béo)</h2>
+                    <p>Chất béo là nguồn năng lượng đậm đặc, giúp hấp thu vitamin tan dầu, bảo vệ cơ quan. Chúng cấu tạo màng tế bào, tốt cho não bộ và tim mạch khỏe mạnh</p>
+                </div>
+            </a>
+            <a href="https://bestme.vn/blogs/cham-soc-suc-khoe/20-loai-thuc-pham-giau-vitamin-va-khoang-chat" class="nutrient-link" target="_blank" rel="noopener">
+                <div class="nutrient-box vitamins">
+                    <i class="fas fa-apple-alt"></i>
+                    <h2>Vitamins <br>(Vitamin)</h2>
+                    <p>Vitamin là chất xúc tác thiết yếu cho mọi phản ứng hóa học cơ thể. Chúng tăng cường hệ miễn dịch, hỗ trợ thị lực, xương khớp, và bảo vệ tế bào khỏi tổn thương</p>
+                </div>
+            </a>
+            <a href="https://thanhnien.vn/10-loai-thuc-pham-giau-khoang-chat-can-thiet-cho-ban-185976721.htm" class="nutrient-link" target="_blank" rel="noopener">
+                <div class="nutrient-box minerals">
+                    <i class="fas fa-mountain"></i>
+                    <h2>Minerals <br> (Khoáng chất)</h2>
+                    <p>Khoáng chất cấu tạo xương, răng, cân bằng chất lỏng, hỗ trợ chức năng thần kinh và cơ bắp. Chúng tham gia vào sản xuất enzyme, hormone, duy trì sinh lý</p>
+                </div>
+            </a>
+            <a href="https://plo.vn/top-16-thuc-pham-giau-nuoc-giup-co-the-luon-du-nuoc-post824964.html" class="nutrient-link" target="_blank" rel="noopener">
+                <div class="nutrient-box water">
+                    <i class="fas fa-tint"></i>  <!-- giọt nước -->
+                    <h2>Nước <br>(Water)</h2>
+                    <p>Nước là dung môi vận chuyển chất dinh dưỡng, đào thải chất thải, điều hòa nhiệt độ, bôi trơn khớp. Rất cần thiết cho mọi chức năng sống của cơ thể</p>
+                </div>
+            </a>
+        </div>  
+    </section>
+
+    <!-- Thực phẩm nguy hiểm -->
+    <section class="dangerous-food hidden">
+    <!-- Bên trái: animation -->
+    <div class="lottie-box">
+        <dotlottie-player
+        src="https://lottie.host/192f42e8-6f61-44f9-9b55-a778b42eea21/mwg4Ng2NYv.lottie"
+        background="transparent"
+        speed="1"
+        style="width: 100%; height: 100%"
+        loop
+        autoplay
+        ></dotlottie-player>
+    </div>
+
+    <!-- Bên phải: nội dung -->
+    <div class="text-box">
+        <h2>Những thực phẩm có nguy cơ gây hại</h2>
+        <p>
+        Để duy trì một cơ thể khỏe mạnh và phòng tránh bệnh tật, việc cân nhắc kỹ lưỡng các loại thực phẩm đưa vào cơ thể là vô cùng quan trọng. 
+        Một số thực phẩm như đồ chiên rán ngập dầu, thức ăn nhanh, nước ngọt có gas hay thực phẩm chế biến sẵn (gồm thịt chế biến và đồ ăn đóng
+        gói nhiều đường, muối, chất béo không lành mạnh) có thể làm tăng đáng kể nguy cơ mắc các bệnh tim mạch, béo phì, tiểu đường và nhiều vấn 
+        đề sức khỏe nghiêm trọng khác. Thậm chí, việc lạm dụng đồ uống có cồn cũng tiềm ẩn nguy cơ gây hại cho gan và các cơ quan khác. Hãy chủ động hạn chế tối đa việc tiêu thụ các loại thực phẩm này, thay vào đó ưu tiên thực phẩm tươi sống, ít qua chế biến để bảo vệ sức khỏe lâu dài của bạn.
+        </p>
+    </div>
+    </section>
+
+    <section class="inspiration">
+        <div class="call-to-action">
+            <h2>Cùng nhau cải thiện và nâng cao sức khỏe mỗi ngày!</h2>
+            <p>Chúng tôi đồng hành cùng bạn trên hành trình sống khỏe, đẹp và hạnh phúc.</p>
+            <img src="img/healthy-lifestyle.jpg" alt="Healthy Lifestyle" class="cta-img">
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer id="contact">
+        <div class="footer-sec">
+            <div class="f_box">
+                <h2>Liên hệ</h2>
+                <p><a href="mailto:your@email.com">
+                    <i class="fas fa-envelope"></i> your@email.com
+                </a></p>
+
+                <p><a href="https://facebook.com" target="_blank">
+                    <i class="fab fa-facebook-f"></i> Facebook
+                </a></p>
+
+                <p><a href="https://youtube.com" target="_blank">
+                    <i class="fab fa-youtube"></i> YouTube
+                </a></p>
+
+                <p><a href="https://twitter.com" target="_blank">
+                    <i class="fab fa-twitter"></i> Twitter
+                </a></p>
+            </div>
+
+
+            <div class="f_box">
+                <h2>Dịch vụ</h2>
+                <p><a href="chedoan.html">Chế độ ăn uống</a></p>
+                <p><a href="fitness.html">Fitness</a></p>
+                <p><a href="suckhoe.html">Theo dõi sức khỏe</a></p>
+            </div>
+
+
+            <div class="f_box">
+            <h2>Địa chỉ</h2>
+            <p>Đường ABC, TP.HCM</p>
+            <p>
+                <a href="https://www.google.com/maps/place/Quận+12,+Thành+phố+Hồ+Chí+Minh" target="_blank" title="Xem trên Google Maps">
+                <i class="fas fa-map-marked-alt"></i>
+                </a>
+            </p>
+            </div>
+        </div>
+
+        <a href="thanhvien.html" style="color: white;text-decoration: none;"><p class="para">© 2025 Sức Khỏe & Thể Hình</p></a>
+    </footer>
+
+    <script src="auth.js"></script>
+    <script src="chedoan.js"></script>
+    <script src="userSession.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js@1.12.0"></script>
+</body>
+</html>

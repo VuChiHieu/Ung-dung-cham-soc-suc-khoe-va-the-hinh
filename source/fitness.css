@@ -1,0 +1,905 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Gabarito&family=Inclusive+Sans&family=Inter&family=Montserrat&family=Poppins&family=Raleway&family=Roboto&family=Space+Grotesk&family=Ubuntu&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+    transition: all 0.5s linear;
+    font-family: 'Courgette', cursive;
+    font-family: 'Gabarito', sans-serif;
+    font-family: 'Inclusive Sans', sans-serif;
+}
+
+html, body{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+body::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+/*Home*/
+.background{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(80, 82, 82, 0.57),rgba(2 10 10/20%)),url(img/fitness/background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.navbar img{
+    width: 80px;
+}
+.navbar-items{
+    flex: 1;
+    text-align: right;
+}
+.navbar{
+    display: flex;
+    padding: 1% 2%;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.navbar ul li{
+    position: relative;
+    list-style: none;
+    display: inline-block;
+    padding: 1% 2%;
+    font-weight: bold;
+    font-size: 18px;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+.navbar ul li::after{
+    content: '';
+    height: 2px;
+    width: 0;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+    background-color: #2e6476;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+.burger{
+    display: none;
+}
+
+.main {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 180px; 
+    flex-wrap: wrap;
+    padding: 40px 20px;
+}
+
+.text-box {
+    color: white;
+    width: 45%;
+    min-width: 300px;
+    margin-right: 50px;
+}
+
+.text-box h1 {
+    font-size: 60px;
+    padding: 10px 20px;
+}
+
+#pmain{
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.btn{
+    background-color: #2e6476;
+    color: #fff;
+    border: 2px solid transparent;
+    padding: 10px 8px;
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+.btn1:hover{
+    background-color: #fff;
+    color: #2e6476;
+}
+.btn2{
+    background-color: #fff;
+    color: #2e6476;
+    margin-top: 1%;
+}
+.btn2:hover{
+    color: #fff;
+    background-color: #6a8d9a;
+}
+
+@media (max-width: 1366px) {
+  .text-box h1 {
+    font-size: 46px;
+  }
+
+  .benefit {
+    font-size: 18px;
+    padding: 18px 24px;
+  }
+
+  .benefit i {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .main {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 40px 20px;
+  }
+
+  .text-box, .fitness-benefits {
+    width: 90%;
+    text-align: center;
+  }
+
+  .text-box h1 {
+    font-size: 42px;
+  }
+
+  .benefit {
+    flex: 1 1 45%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-items {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: left;
+  }
+
+  .navbar-items.active {
+    display: flex;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .burger {
+    display: block;
+    color: white;
+  }
+
+  .text-box h1 {
+    font-size: 34px;
+  }
+
+  .benefit {
+    flex: 1 1 100%;
+    font-size: 18px;
+    padding: 16px;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  .text-box h1 {
+    font-size: 28px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .benefit {
+    font-size: 16px;
+  }
+}
+
+.calo-tracker-section {
+    background-color: #eaf7fc;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.calo-tracker-box {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.calo-input label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #1a92be;
+}
+
+.calo-input input {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.calo-input button {
+    padding: 10px 20px;
+    background-color: #1a92be;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.calo-input button:hover {
+    background-color: #157aa1;
+}
+
+.calo-progress-link {
+    display: inline-block;
+    padding: 8px 16px;
+    color: #1a92be;
+    border: 2px solid #1a92be;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.calo-progress-link:hover {
+    background-color: #1a92be;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.calo-result {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.fitness-benefits {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 40px 20px;
+  height: 320px;
+  background-color: #e3f4fc;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+}
+
+.fitness-benefits .benefit {
+  width: 80px;
+  height: 60%;
+  background-color: #1a92be;
+  color: #fff;
+  border-radius: 8px 8px 0 0;
+  text-align: center;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 10px 5px;
+  animation: pulseHeight 2s ease-in-out infinite alternate;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.fitness-benefits .benefit:hover {
+  transform: scale(1.1);
+}
+
+.fitness-benefits .benefit i {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+/* Gán độ trễ để tạo hiệu ứng biểu đồ động */
+.fitness-benefits .benefit:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.fitness-benefits .benefit:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.fitness-benefits .benefit:nth-child(3) {
+  animation-delay: 0.8s;
+}
+
+@keyframes pulseHeight {
+  0% {
+    height: 60%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+.fitness-intro {
+  padding: 60px 5%;
+  background-color: #f5fafd;
+  color: #333;
+}
+
+.fitness-intro .heading {
+  text-align: center;
+  font-size: 40px;
+  color: #2e6476;
+  margin-bottom: 40px;
+}
+
+.intro-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.lottie-box {
+  flex: 1 1 400px;
+  text-align: center;
+}
+
+.text-box2 {
+  flex: 1 1 400px;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #555;
+  padding: 10px;
+}
+
+.btn3 {
+    background-color: #1a92be;
+    color: white;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.btn3:hover {
+    background-color: #157aa0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-2px); }
+    50% { transform: translateX(2px); }
+    75% { transform: translateX(-2px); }
+    100% { transform: translateX(0); }
+}
+
+.fitness-intro.hidden {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+.fitness-intro.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.heading {
+    text-align: center;
+    font-size: 36px;
+    color: #2e6476;
+    margin-bottom: 30px;
+    margin-top: 100px;
+}
+
+.goal-grid {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+.goal-box {
+  flex: 1 1 250px;
+  background: #f2f9ff;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+.goal-box:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
+.goal-box i {
+  font-size: 36px;
+  color: #1a92be;
+  margin-bottom: 12px;
+}
+.goal-box span {
+  display: inline-block;
+  margin-top: 10px;
+  color: #1a92be;
+  font-weight: bold;
+}
+
+.goal-box img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.goal-box {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  cursor: pointer;
+}
+
+.goal-box.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover thêm nổi bật */
+.goal-box:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.muscle-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  margin: 40px 0;
+}
+
+.muscle-card {
+  background-color: #1a92be;
+  color: white;
+  padding: 20px 30px;
+  border-radius: 12px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+.muscle-card:hover {
+  transform: scale(1.05);
+  background-color: #155e7c;
+}
+
+.muscle-card {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.muscle-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.muscle-slider {
+  margin-top: 30px;
+  background-color: #f0faff;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  display: none;
+  animation: fadeIn 0.5s ease;
+}
+
+.muscle-slider img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+#slide-caption {
+  margin-top: 15px;
+  font-weight: 600;
+  font-size: 18px;
+  color: #2e6476;
+}
+
+.slide-controls {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.slide-controls button {
+  padding: 10px 20px;
+  background-color: #1a92be;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.slide-controls button:hover {
+  background-color: #155e7c;
+}
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #444;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.muscle-slider.show {
+  display: block;
+  animation: fadeIn 0.5s ease;
+}
+
+/**/
+.burn-fat-section {
+  padding: 60px 5%;
+  background-color: #f9f9f9;
+}
+
+.burn-fat-section .heading {
+  text-align: center;
+  color: #2e6476;
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.burn-fat-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 60px; /* giảm gap để 2 bên sát hơn */
+  flex-wrap: wrap;
+}
+
+/* Bên trái */
+.img-box {
+  flex: 1 1 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-box img {
+  width: 100%; /* hiển thị ảnh rộng theo box */
+  height: auto;
+  max-height: 50vh; /* 50% chiều cao màn hình */
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Bên phải */
+.card-box {
+  flex: 1 1 45%;
+}
+
+.card-box h2 {
+  color: #1a92be;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.video-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.video-card {
+  display: flex;
+  align-items: center;
+  background-color: #e3f4fc;
+  padding: 16px 16px; /* giảm padding để card ngắn lại */
+  border-radius: 10px;
+  color: #2e6476;
+  font-weight: 500;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  font-size: 15px; /* gọn hơn */
+  max-width: 400px;  /* Giới hạn chiều ngang */
+  width: 100%;  
+}
+
+.video-card i {
+  margin-right: 10px;
+  font-size: 20px;
+  color: #1a92be;
+}
+
+.video-card:hover {
+  background-color: #cdeefa;
+  transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .burn-fat-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; /* thêm gap dọc nhẹ nhàng */
+  }
+
+  .img-box, .card-box {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .video-card {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* Ẩn ban đầu */
+.hidden {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Khi hiện ra */
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.video-card {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.video-card.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.img-box {
+  justify-content: center;
+  align-items: center;
+}
+
+.nutrition-and-exercise-balance {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 60px 5%;
+  flex-wrap: wrap;
+}
+
+.lottie-box {
+  width: 400px;
+  height: 400px;
+  flex: 1 1 350px;
+}
+
+.text-box {
+  flex: 1 1 400px;
+  max-width: 600px;
+}
+
+.text-box h2 {
+  font-size: 32px;
+  color: #06e89d;
+  margin-bottom: 16px;
+}
+
+.text-box p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+}
+
+.nutrition-and-exercise-balance.hidden {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.nutrition-and-exercise-balance.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nutrition-and-exercise-balance {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .lottie-box {
+    width: 100%;
+    height: 300px;
+  }
+}
+
+/* Ẩn ban đầu */
+.hidden {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Khi hiện ra */
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.inspiration{
+    width: 80%;
+    margin: auto;
+    padding: 2% 0;
+}
+
+.call-to-action {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #dff2fb, #f3fbff);
+    border-radius: 12px;
+    margin-top: 40px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.call-to-action h2 {
+    font-size: 32px;
+    color: #2e6476;
+    margin-bottom: 12px;
+}
+
+.call-to-action p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 24px;
+}
+
+.cta-img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+footer{
+    background-color: #2e6476;
+    color: #fff;
+    margin: 0 auto;
+}
+.footer-sec{
+    padding: 3% 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
+    justify-content: center;
+    margin-left: 120px;
+}
+.sec{
+    display: flex;
+    flex-basis: 40%;
+}
+.f_box{
+    min-width: 200px;
+    flex: 1 1 250px; 
+}
+.f_box h2{
+    padding-bottom: 2%;
+}
+.f_box p{
+    padding: 4px 0;
+}
+.f_box p i{
+    font-size: 23px;
+    padding: 5px 3px;
+    cursor: pointer;
+}
+.para{
+    text-align: center;
+    padding: 12px 0;
+    background-color: #333;
+    margin-top: 20px;
+}
+
+.f_box p i {
+    font-size: 18px;
+    padding-right: 8px;
+    vertical-align: middle;
+    color: #f3b03f;
+    transition: all 0.3s ease;
+}
+
+.f_box p:hover i {
+    color: #fff;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+
+.f_box a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.f_box a:hover {
+  color: #f3b03f;
+  text-decoration: none;
+}

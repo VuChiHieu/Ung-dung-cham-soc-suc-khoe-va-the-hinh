@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon_io/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon_io/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/favicon_io/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="img/favicon_io/android-chrome-512x512.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon_io/apple-touch-icon.png">
+    <link rel="stylesheet" href="fitness.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" 
+    integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+</head>
+<body>
+    <section class="background">
+        <nav class="navbar">
+            <a href="#" class="logo"><img src="img/logo.png" alt=""></a>
+            <div class="burger" onclick="toggleMenu()">☰</div>
+            <div class="navbar-items h-class">
+                <ul class="nav v-class">
+                    <li><a href="index.html">TRANG CHỦ</a></li>
+                    <li><a href="chedoan.html">CHẾ ĐỘ ĂN</a></li>
+                    <li><a href="fitness.html">FITNESS</a></li>
+                    <li><a href="suckhoe.html">SỨC KHỎE<Em></Em></a></li>
+                    <li><a href="#contact">LIÊN HỆ</a></li>
+                    <li><a href="login.html" id="loginNav">ĐĂNG NHẬP</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- _________main-sec -->
+            <div class="main">
+                <div class="text-box">
+                    <h1>Không cần phòng gym – chỉ cần bạn sẵn sàng!</h1>
+                    <p id="pmain">
+                        Cùng FitLife, bạn sẽ khám phá các bài tập đơn giản, hiệu quả ngay tại nhà. 
+                        Kết hợp cùng chế độ ăn uống hợp lý, bạn có thể thay đổi vóc dáng và sức khỏe chỉ sau vài tuần luyện tập đều đặn.
+                    </p>
+                    <a href="#infor-more" class="btn btn1">Khám phá ngay</a>
+                </div>
+
+                <div class="box fitness-benefits">
+                    <div class="benefit"><i class="fas fa-dumbbell"></i>cơ</div>
+                    <div class="benefit"><i class="fas fa-brain"></i>não</div>
+                    <div class="benefit"><i class="fas fa-heartbeat"></i>tim</div>
+                </div>
+            </div>
+    </section>
+
+    <section class="fitness-intro hidden"  id="infor-more">
+    <h1 class="heading">Theo bạn Fitness là gì?</h1>
+
+    <div class="intro-content">
+        <!-- Bên trái: animation -->
+        <div class="lottie-box">
+            <dotlottie-player
+                src="https://lottie.host/f1d7b59b-026e-4ef1-8154-7971ed3a6032/TvX1OAihqZ.lottie"
+                background="transparent"
+                speed="1"
+                style="width: 300px; height: 300px"
+                loop autoplay>
+            </dotlottie-player>
+            </div>
+
+            <!-- Bên phải: nội dung -->
+            <div class="text-box2">
+                <p>
+                    Fitness không chỉ là việc tập luyện để có thân hình đẹp, mà đó là trạng thái tổng thể của sức khỏe
+                    và sự khỏe mạnh, cho phép bạn thực hiện các hoạt động hàng ngày một cách dễ dàng và hiệu quả.
+                    <br><br>
+                    Nó bao gồm nhiều yếu tố như: sức bền tim mạch, sức mạnh và sức bền cơ bắp, tính linh hoạt và thành phần cơ thể.
+                    Khi có nền tảng fitness tốt, bạn không chỉ dồi dào năng lượng mà còn giảm nguy cơ bệnh tật và nâng cao chất lượng cuộc sống toàn diện.
+                    <br><br>
+                    Việc kết hợp một chế độ ăn uống cân bằng, tập luyện khoa học và nghỉ ngơi hợp lý là điều cần thiết.
+                    Giúp bạn duy trì một lối sống lành mạnh.
+                </p>
+                <button class="btn btn3" onclick="window.open('https://oreni.vn/fitness-la-gi.html', '_blank')">Tìm hiểu thêm</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="calo-tracker-section">
+        <h1 class="heading">Theo dõi lượng calo mỗi ngày</h1>
+        <div class="calo-tracker-box">
+            <form id="calo-form">
+                <div class="calo-input">
+                    <label for="calo-in">Calo nạp vào:</label>
+                    <input type="number" id="calo-in" name="calo_in" placeholder="Calo nạp vào" required>
+
+                    <label for="duration">Thời gian tập luyện (phút):</label>
+                    <input type="number" id="duration" name="duration" placeholder="Thời gian luyện tập (phút)" required>
+
+                    <button type="submit">Tính và lưu calo</button>
+                </div>
+            </form>
+            <div class="calo-result" id="calo-result"></div>
+            <div class="calo-link-wrapper" style="text-align: right; margin-top: 10px;">
+                <a href="calo_progress.php" target="_blank" class="calo-progress-link">
+                    Xem bảng thống kê tuần này
+                </a>
+        </div>
+        </div>
+    </section>
+
+    <section class="workout-guide">
+    <h1 class="heading">Hướng dẫn bài tập thể hình tại nhà</h2>
+        <div class="goal-grid">
+            <div class="goal-box" onclick="location.href='#muscle'">
+                <img src="img/fitness/muscle.jpg" alt="Tăng cơ">
+                <i class="fas fa-dumbbell"></i>
+                <h3>Tăng cơ</h3>
+                <p>Xây dựng khối lượng cơ bắp, tăng sức mạnh và thể lực.</p>
+                <span>→ Khám phá</span>
+            </div>
+            <div class="goal-box" onclick="location.href='#burn-fat'">
+                <img src="img/fitness/cardio.jpg" alt="Tăng cơ">
+                <i class="fas fa-fire-alt"></i>
+                <h3>Giảm mỡ</h3>
+                <p>Đốt cháy calo, giảm cân hiệu quả và duy trì vóc dáng.</p>
+                <span>→ Khám phá</span>
+            </div>
+            <div class="goal-box" onclick="location.href='#maintain'">
+                    <img src="img/fitness/yoga.jpg" alt="Tăng cơ">
+                    <i class="fas fa-heart"></i>
+                    <h3>Giữ dáng</h3>
+                    <p>Duy trì vóc dáng, sức khỏe ổn định và lối sống tích cực.</p>
+                    <span>→ Khám phá</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tăng cơ theo nhóm -->
+    <section class="muscle-section" id="muscle">
+        <h1 class="heading">Bạn đang muốn tập nhóm cơ nào?</h1>
+        <div class="muscle-cards">
+            <div class="muscle-card" data-target="chest">Cơ ngực</div>
+            <div class="muscle-card" data-target="back">Cơ lưng</div>
+            <div class="muscle-card" data-target="shoulders">Cơ vai</div>
+            <div class="muscle-card" data-target="arms">Cơ tay</div>
+            <div class="muscle-card" data-target="legs">Cơ chân</div>
+            <div class="muscle-card" data-target="abs">Cơ bụng</div>
+        </div>
+
+        <!-- Slideshow sẽ hiển thị tại đây -->
+        <div class="muscle-slider hidden" id="slider-box">
+            <button class="close-btn">×</button>
+            <img id="slide-img" src="" alt="">
+            <div id="slide-caption"></div>
+            <div class="slide-controls">
+                <button id="prev">←</button>
+                <button id="next">→</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="burn-fat-section" id="burn-fat">
+        <h1 class="heading">Các bài tập đốt cháy mỡ thừa</h1>
+
+        <div class="burn-fat-content">
+            <!-- Trái: ảnh -->
+            <div class="img-box">
+                <img src="img/fitness/burnfat.jpg" alt="Đốt cháy mỡ bụng">
+            </div>
+
+            <!-- Phải: các card -->
+            <div class="card-box">
+            <h2>Danh sách video bài tập</h2>
+            <div class="video-cards">
+                <a href="https://youtu.be/FeR-4_Opt-g?si=EJZKh9o25IYPUt_e" class="video-card" target="_blank">
+                    <i class="fas fa-play-circle"></i> Cardio đốt mỡ cho người mới
+                </a>
+                <a href="https://youtu.be/2MZSjB1WLFg?si=2j0evoljVlaJwQrM" class="video-card" target="_blank">
+                    <i class="fas fa-bolt"></i> HIIT giảm mỡ bụng nhanh
+                </a>
+                <a href="https://youtu.be/LwWEBTOMyRE?si=V4cK-F_CXgKK4DVK" class="video-card" target="_blank">
+                    <i class="fas fa-walking"></i> Bài tập không dụng cụ
+                </a>
+                <a href="https://youtu.be/9F_ICx0yc2w?si=oBhxBwit4C0mJiTD" class="video-card" target="_blank">
+                    <i class="fas fa-heartbeat"></i> 7 ngày giảm mỡ toàn thân
+                </a>
+            </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="maintain-shape-section" id="maintain">
+        <h1 class="heading">Các bài tập giúp giữ dáng</h1>
+
+        <div class="burn-fat-content">
+            <!-- Bên trái: animation -->
+            <div class="img-box">
+                <dotlottie-player
+                src="https://lottie.host/96ea2c02-44b8-47af-8797-9a46ed5ab580/piNDxCMzF9.lottie"
+                background="transparent"
+                speed="1"
+                style="width: 300px; height: 300px"
+                loop
+                autoplay
+                ></dotlottie-player>
+            </div>
+
+            <!-- Bên phải: các video/card -->
+            <div class="card-box">
+                <h2>Danh sách video bài tập</h2>
+                <div class="video-cards">
+                    <a href="https://youtu.be/yPK7ISPEu3M?si=YTtXqPdpPtMl1hlr" class="video-card" target="_blank">
+                        <i class="fas fa-running"></i> Yoga nhẹ nhàng mỗi sáng
+                    </a>
+                    <a href="https://youtu.be/4kIl9LaljNs?si=lJfvK1WKnwgPlSWh" class="video-card" target="_blank">
+                        <i class="fas fa-bicycle"></i> Bài tập aerobic giữ vóc dáng
+                    </a>
+                    <a href="https://youtu.be/d_yc8006Y3M?si=7s-HCdpA-XtlZpZA" class="video-card" target="_blank">
+                        <i class="fas fa-heart"></i> Thể dục thư giãn tại nhà
+                    </a>
+                    <a href="https://youtu.be/C2HX2pNbUCM?si=0EwDcUox3SSxUfO9" class="video-card" target="_blank">
+                        <i class="fas fa-dumbbell"></i> Pilates săn chắc cơ thể
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="nutrition-and-exercise-balance hidden">
+        <div class="lottie-box">
+            <dotlottie-player
+            src="https://lottie.host/e1c5e552-8940-43ec-a3e4-d7b98a2473aa/bDFEudTr5u.lottie"
+            background="transparent"
+            speed="1"
+            style="width: 300px; height: 300px"
+            loop
+            autoplay
+            ></dotlottie-player>
+        </div>
+
+        <div class="text-box">
+            <h2>Dinh dưỡng và Tập luyện: Chìa khóa cho Fitness bền vững</h2>
+            <p>
+            Để đạt được mục tiêu thể chất và duy trì một lối sống Fitness bền vững, việc kết hợp hài hòa giữa chế độ ăn uống khoa học và lịch trình tập luyện đều đặn là vô cùng quan trọng. Tập luyện giúp đốt cháy calo, xây dựng cơ bắp, tăng cường sức bền và cải thiện sức khỏe tim mạch. Tuy nhiên, nếu không đi kèm với dinh dưỡng hợp lý, hiệu quả tập luyện sẽ bị hạn chế đáng kể.
+            </p>
+            <p>
+            Hãy ưu tiên các thực phẩm nguyên chất như rau xanh, trái cây, protein nạc và ngũ cốc nguyên hạt. Hạn chế đồ ăn chế biến sẵn, đường tinh luyện, chất béo bão hòa và đồ uống có cồn. Dinh dưỡng đúng cách không chỉ cung cấp năng lượng cho buổi tập mà còn hỗ trợ phục hồi cơ bắp và tối ưu hóa quá trình giảm mỡ, tăng cơ. Hãy xem dinh dưỡng và tập luyện là hai yếu tố bổ trợ không thể tách rời trên hành trình chinh phục sức khỏe và vóc dáng lý tưởng của bạn.
+            </p>
+        </div>
+    </section>
+
+    <section class="inspiration">
+        <div class="call-to-action">
+            <h2>Cùng nhau cải thiện và nâng cao sức khỏe mỗi ngày!</h2>
+            <p>Chúng tôi đồng hành cùng bạn trên hành trình sống khỏe, đẹp và hạnh phúc.</p>
+            <img src="img/healthy-lifestyle.jpg" alt="Healthy Lifestyle" class="cta-img">
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer id="contact">
+        <div class="footer-sec">
+            <div class="f_box">
+                <h2>Liên hệ</h2>
+                <p><a href="mailto:your@email.com">
+                    <i class="fas fa-envelope"></i> your@email.com
+                </a></p>
+
+                <p><a href="https://facebook.com" target="_blank">
+                    <i class="fab fa-facebook-f"></i> Facebook
+                </a></p>
+
+                <p><a href="https://youtube.com" target="_blank">
+                    <i class="fab fa-youtube"></i> YouTube
+                </a></p>
+
+                <p><a href="https://twitter.com" target="_blank">
+                    <i class="fab fa-twitter"></i> Twitter
+                </a></p>
+            </div>
+
+
+            <div class="f_box">
+                <h2>Dịch vụ</h2>
+                <p><a href="chedoan.html">Chế độ ăn uống</a></p>
+                <p><a href="fitness.html">Fitness</a></p>
+                <p><a href="suckhoe.html">Theo dõi sức khỏe</a></p>
+            </div>
+
+
+            <div class="f_box">
+            <h2>Địa chỉ</h2>
+            <p>Đường ABC, TP.HCM</p>
+            <p>
+                <a href="https://www.google.com/maps/place/Quận+12,+Thành+phố+Hồ+Chí+Minh" target="_blank" title="Xem trên Google Maps">
+                <i class="fas fa-map-marked-alt"></i>
+                </a>
+            </p>
+            </div>
+        </div>
+
+        <a href="thanhvien.html" style="color: white;text-decoration: none;"><p class="para">© 2025 Sức Khỏe & Thể Hình</p></a>
+    </footer>
+
+    <script src="auth.js"></script>
+    <script src="fitness.js"></script>
+    <script src="userSession.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js@1.12.0"></script>
+    <script>
+        document.querySelector('.btn1').addEventListener('click', function(e) {
+        e.preventDefault();
+        const section = document.getElementById('infor-more');
+        section.classList.remove('hidden');
+        section.scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nhóm 4 - Digital CV</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+      font-family: 'Orbitron', sans-serif;
+      color: white;
+      text-align: center;
+    }
+
+    h1 {
+      margin-top: 40px;
+      font-size: 2.5em;
+    }
+
+    p {
+      margin-top: 10px;
+      color: #ccc;
+    }
+
+    .team-container {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-top: 50px;
+    }
+
+    .member {
+      background-color: rgba(255,255,255,0.08);
+      padding: 20px;
+      border-radius: 12px;
+      width: 180px;
+      transition: transform 0.3s;
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+    }
+
+    .member:hover {
+      transform: scale(1.05);
+      background-color: rgba(255,255,255,0.12);
+    }
+
+    .member img {
+      width: 180px;           
+      height: 240px;          
+      object-fit: cover;   
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+
+    .member-name {
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    .member a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .cv-button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 16px;
+      background-color: #1f8ef1;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 0.9em;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .cv-button:hover {
+      background-color: #0d6efd;
+      transform: scale(1.05);
+    }
+
+
+    footer {
+      margin-top: 60px;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>NHÓM 4 - DIGITAL CV</h1>
+  <p>Chào mừng bạn đến với trang portfolio cá nhân của nhóm chúng tôi ✨</p>
+
+  <div class="team-container">
+    <div class="member">
+        <img src="img/avt1.png" alt="Vũ Chí Hiếu">
+        <div class="member-name">Vũ Chí <br>Hiếu <br>
+        MSSV: 070205008865
+        </div>
+        
+    </div>
+
+    <div class="member">
+        <img src="img/avt2.png" alt="Vũ Chí Hiếu">
+        <div class="member-name">Hà Ngọc <br>Hiếu
+        <br>MSSV: 070205002579
+        </div>
+    </div>
+
+    <div class="member">
+        <img src="img/avt3.png" alt="Vũ Chí Hiếu">
+        <div class="member-name">Nguyễn Thúc Gia Khôi
+            <br>MSSV: 068205002184
+        </div>
+    </div>
+  </div>
+
+  <a href="index.html" class="cv-button" style="margin-top: 50px;">⬅ Quay về trang chủ</a>
+
+  <footer>
+    &copy; 2025 Nhóm 4 - Công nghệ Thông tin
+  </footer>
+</body>
+</html>

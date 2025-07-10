@@ -1,0 +1,938 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Gabarito&family=Inclusive+Sans&family=Inter&family=Montserrat&family=Poppins&family=Raleway&family=Roboto&family=Space+Grotesk&family=Ubuntu&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+    transition: all 0.5s linear;
+    font-family: 'Courgette', cursive;
+    font-family: 'Gabarito', sans-serif;
+    font-family: 'Inclusive Sans', sans-serif;
+}
+
+html, body{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+body::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+.background{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(80, 82, 82, 0.57),rgba(2 10 10/20%)),url(img/suckhoe/background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/*Nav*/
+.navbar img{
+    width: 80px;
+}
+.navbar-items{
+    flex: 1;
+    text-align: right;
+}
+.navbar{
+    display: flex;
+    padding: 1% 2%;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.navbar ul li{
+    position: relative;
+    list-style: none;
+    display: inline-block;
+    padding: 1% 2%;
+    font-weight: bold;
+    font-size: 18px;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+.navbar ul li::after{
+    content: '';
+    height: 2px;
+    width: 0;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+    background-color: #2e6476;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+.burger{
+    display: none;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 60px 5%;
+  flex-wrap: wrap;
+}
+
+.text-box {
+  flex: 1 1 45%;
+  min-width: 300px;
+  color: #fff;
+}
+
+.text-box h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.text-box p {
+  font-size: 16px;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.lottie-box, .image-box {
+  flex: 1 1 45%;
+  display: flex;
+  justify-content: center;
+}
+
+#pmain{
+    color: #fff;
+    padding: 10px 0;
+    font-size: 16px;
+}
+
+.btn{
+    background-color: #2e6476;
+    color: #fff;
+    border: 2px solid transparent;
+    padding: 10px 8px;
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.btn1:hover{
+    background-color: #fff;
+    color: #2e6476;
+}
+.btn2{
+    background-color: #fff;
+    color: #2e6476;
+    margin-top: 1%;
+}
+.btn2:hover{
+    color: #fff;
+    background-color: #6a8d9a;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-items {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: left;
+  }
+
+  .navbar-items.active {
+    display: flex;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .burger {
+    display: block;
+    color: white;
+  }
+
+  .main {
+    flex-direction: column;
+    padding: 40px 20px;
+    height: auto;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .text-box {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .text-box h1 {
+    font-size: 32px;
+  }
+
+  .text-box p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .lottie-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .lottie-box dotlottie-player {
+    width: 280px !important;
+    height: 280px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-box h1 {
+    font-size: 26px;
+  }
+
+  .text-box p {
+    font-size: 15px;
+  }
+
+  .lottie-box dotlottie-player {
+    width: 220px !important;
+    height: 220px !important;
+  }
+}
+
+
+.heading {
+    text-align: center;
+    font-size: 36px;
+    color: #2e6476;
+    margin-bottom: 30px;
+}
+
+.health-intro {
+  padding: 60px 5%;
+  background-color: #f5faff;
+}
+
+.intro-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* Ảnh bên trái */
+.img-box {
+  flex: 1 1 40%;
+  text-align: center;
+}
+
+.img-box img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Nội dung bên phải */
+.intro-text {
+  flex: 1 1 50%;
+  color: #2e6476;
+}
+
+.intro-text h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #1a92be;
+}
+
+.intro-text p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.intro-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.intro-links .btn1 {
+  background-color: #1a92be;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.intro-links .btn1:hover {
+  background-color: #155e7c;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .intro-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .intro-links {
+    justify-content: center;
+  }
+
+  .img-box img {
+    max-width: 80%;
+  }
+}
+
+.health-intro {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+.health-intro.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.health-intro .img-box,
+.health-intro .intro-text {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.health-intro.show .img-box,
+.health-intro.show .intro-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.health-factors {
+  padding: 60px 5%;
+  background: #f4fbfd;
+  text-align: center;
+}
+
+.factors-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cột cố định */
+  gap: 30px;
+  margin-top: 40px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.factor-box {
+  background-color: #e3f4fc;
+  padding: 30px 20px;
+  border-radius: 12px;
+  color: #2e6476;
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.factor-box i {
+  font-size: 30px;
+  padding: 18px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  background-color: white;
+  display: inline-block;
+}
+
+
+
+.nutrition { background-color: #fff8e1; } 
+.exercise { background-color: #e0f2f7; } 
+.sleep    { background-color: #f3e5f5; } 
+.mental   { background-color: #fce4ec; }
+.water    { background-color: #e1f5fe; }
+.avoid    { background-color: #ffe0b2; } 
+
+.nutrition i { color: #ffab40; } 
+.exercise i  { color: #00bcd4; } 
+.sleep i     { color: #9c27b0; } 
+.mental i    { color: #ec407a; } 
+.water i     { color: #2196f3; } 
+.avoid i     { color: #ff7043; } 
+
+/* Màu hover (hover) */
+.nutrition:hover { background-color: #ffe0b2; }
+.exercise:hover  { background-color: #b2ebf2; }
+.sleep:hover     { background-color: #e1bee7; }
+.mental:hover    { background-color: #f8bbd0; }
+.water:hover     { background-color: #b3e5fc; }
+.avoid:hover     { background-color: #ffccbc; }
+
+.factor-box i {
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+.factor-box h3 {
+  font-size: 18px;
+  color: #2e6476;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .factors-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cột trên tablet */
+  }
+}
+
+@media (max-width: 500px) {
+  .factors-grid {
+    grid-template-columns: 1fr; /* 1 cột trên điện thoại */
+  }
+}
+
+.factor-box:hover {
+  transform: scale(1.25);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.health-form-section {
+  background: linear-gradient(to right, #e0f7ff, #ffffff);
+  padding: 40px 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  max-width: 600px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.health-form-section h2 {
+  color: #1a92be;
+  margin-bottom: 30px;
+}
+
+.health-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.btn-submit {
+  background-color: #1a92be;
+  color: #fff;
+  padding: 12px 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+  background-color: #157aa1;
+}
+
+.health-message {
+  margin-top: 20px;
+  font-weight: 600;
+  color: #d63031;
+  transition: all 0.3s ease;
+}
+
+.view-health-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #1a92be;
+  text-decoration: underline;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.view-health-link:hover {
+  color: #0f6f91;
+  text-decoration: none;
+}
+
+
+.health-checklist {
+  padding: 60px 5%;
+  background-color: #f4fbfd;
+  text-align: center;
+}
+
+.checklist-chart-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 80px;
+}
+
+.checklist {
+  flex: 1 1 45%;
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  font-size: 18px;
+  color: #2e6476;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+.checklist li {
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.checklist li.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.checklist li i {
+  color: #1a92be;
+  margin-right: 10px;
+  font-size: 24px;
+}
+.checklist li:hover {
+  transform: translateX(8px);
+}
+
+/* Bên phải */
+.chart-area {
+  flex: 1 1 45%;
+  text-align: center;
+}
+
+.chart-area h3 {
+  margin-bottom: 16px;
+  color: #1a92be;
+  font-size: 20px;
+}
+
+#healthChart {
+  max-width: 350px;
+  max-height: 350px;
+  margin: 0 auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .health-checklist {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .checklist-chart-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .checklist,
+  .chart-area {
+    width: 100%;
+    max-width: 480px;
+  }
+
+  .checklist {
+    text-align: left;
+    padding-left: 20px;
+  }
+
+  .checklist li {
+    justify-content: flex-start;
+    font-size: 16px;
+  }
+
+  .chart-area h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  #healthChart {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .checklist {
+    padding-left: 10px;
+    font-size: 15px;
+  }
+
+  .checklist li {
+    font-size: 15px;
+    gap: 8px;
+  }
+
+  .chart-area h3 {
+    font-size: 16px;
+  }
+
+  #healthChart {
+    width: 90% !important;
+    height: auto !important;
+  }
+}
+
+.harmful-foods {
+  padding: 60px 5%;
+  background-color: #fff5f5;
+}
+
+
+.harmful-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.harmful-left {
+  flex: 1 1 45%;
+  text-align: center;
+}
+
+.image-container {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.image-container img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.image-controls {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.image-controls button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.image-controls button:hover {
+  background-color: #c0392b;
+}
+
+#harm-name {
+  font-weight: bold;
+  font-size: 18px;
+  color: #c0392b;
+}
+
+/* Bên phải: mô tả */
+.harmful-right {
+  flex: 1 1 45%;
+  text-align: left;
+  padding: 10px 20px;
+}
+
+.harmful-right h1 {
+  font-size: 32px;
+  color: #c0392b;
+  margin-bottom: 16px;
+}
+
+.harmful-right p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+  
+}
+
+#harm-img {
+  transition: opacity 0.4s ease;
+}
+
+#harm-img.fade-out {
+  opacity: 0;
+}
+
+#harm-title {
+  font-size: 24px;
+  color: #2e6476;
+  margin-bottom: 12px;
+}
+
+#harm-desc {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.6;
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .harmful-content {
+    flex-direction: column;
+  }
+
+  .harmful-left,
+  .harmful-right {
+    max-width: 100%;
+  }
+
+  .image-controls {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+.harmful-foods {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.harmful-foods.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.health-inspire {
+  background: linear-gradient(to right, #e0f7fa, #f1f8e9);
+  padding: 80px 20px;
+  text-align: center;
+  color: #2e6476;
+  margin: 100px;
+  border-radius: 20px;
+}
+
+.inspire-box {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #ffffffee;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  animation: fadeInUp 1s ease forwards;
+}
+
+.inspire-box h2 {
+  font-size: 28px;
+  margin-bottom: 16px;
+  color: #1a92be;
+  font-weight: bold;
+}
+
+.inspire-box p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.btn-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btnx1, .btnx2 {
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btnx1 {
+  background-color: #2e6476;
+  color: white;
+}
+
+.btnx1:hover {
+  background-color: #1a92be;
+}
+
+.btnx2 {
+  background-color: #fff;
+  border: 2px solid #2e6476;
+  color: #2e6476;
+}
+
+.btnx2:hover {
+  background-color: #e0f7fa;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.inspiration{
+    width: 80%;
+    margin: auto;
+    padding: 2% 0;
+}
+
+.call-to-action {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #dff2fb, #f3fbff);
+    border-radius: 12px;
+    margin-top: 40px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.call-to-action h2 {
+    font-size: 32px;
+    color: #2e6476;
+    margin-bottom: 12px;
+}
+
+.call-to-action p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 24px;
+}
+
+.cta-img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+footer{
+    background-color: #2e6476;
+    color: #fff;
+    margin: 0 auto;
+}
+.footer-sec{
+    padding: 3% 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
+    justify-content: center;
+    margin-left: 120px;
+}
+.sec{
+    display: flex;
+    flex-basis: 40%;
+}
+.f_box{
+    min-width: 200px;
+    flex: 1 1 250px; 
+}
+.f_box h2{
+    padding-bottom: 2%;
+}
+.f_box p{
+    padding: 4px 0;
+}
+.f_box p i{
+    font-size: 23px;
+    padding: 5px 3px;
+    cursor: pointer;
+}
+.para{
+    text-align: center;
+    padding: 12px 0;
+    background-color: #333;
+    margin-top: 20px;
+}
+
+.f_box p i {
+    font-size: 18px;
+    padding-right: 8px;
+    vertical-align: middle;
+    color: #f3b03f;
+    transition: all 0.3s ease;
+}
+
+.f_box p:hover i {
+    color: #fff;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+
+.f_box a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.f_box a:hover {
+  color: #f3b03f;
+  text-decoration: none;
+}

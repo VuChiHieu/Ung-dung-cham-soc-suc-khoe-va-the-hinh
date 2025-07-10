@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ứng dụng chăm sóc sức khỏe và thể hình</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon_io/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon_io/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/favicon_io/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="img/favicon_io/android-chrome-512x512.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon_io/apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" 
+    integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js@1.12.0/src/toastify.min.css">
+</head>
+
+<body>
+    <section class="background">
+        <nav class="navbar">
+            <a href="#" class="logo"><img src="img/logo.png" alt=""></a>
+            <div class="burger" onclick="toggleMenu()">☰</div>
+            <div class="navbar-items h-class">
+                <ul class="nav v-class">
+                    <li><a href="index.html">TRANG CHỦ</a></li>
+                    <li><a href="chedoan.html">CHẾ ĐỘ ĂN</a></li>
+                    <li><a href="fitness.html">FITNESS</a></li>
+                    <li><a href="suckhoe.html">SỨC KHỎE<Em></Em></a></li>
+                    <li><a href="#contact">LIÊN HỆ</a></li>
+                    <li><a href="login.html" id="loginNav">ĐĂNG NHẬP</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- _________main-sec -->
+        <div class="main">
+            <div class="text-box">
+                 <h1>chăm sóc sức khỏe toàn diện cùng Fitlife</h1>
+                 <p>FitLife giúp bạn theo dõi quá trình luyện tập, xây dựng chế độ ăn hợp lý 
+                    và giữ sức khỏe mỗi ngày. Đăng ký ngay để bắt đầu hành trình sống khỏe!</p>
+                <a href="#infor-more" class="btn btn1">Tìm hiểu thêm</a>
+            </div>
+            <div class="box">
+                <h1>Đăng ký tư vấn</h1>
+                <input type="text" id="name" name="name" placeholder="Họ và tên">
+                <input type="text" id="age" name="age" placeholder="Tuổi">
+                <input type="email" id="email" name="email" placeholder="Email" autocomplete="off" autocapitalize="none" spellcheck="false">
+                <input type="number" id="phone" name="phone" placeholder="Số điện thoại">
+                <a href="" class="btn btn2" id="submitBooking">Đặt lịch ngay</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="infor-more">
+        <h1 class="heading">Bạn quan tâm đến vấn đề nào</h1>
+        <div class="row">
+
+            <div class="box1" onclick="window.location.href='chedoan.html'">
+                <i class="fas fa-apple-alt"></i>
+                <h2>Chế độ ăn uống</h2>
+                <p>Gợi ý thực đơn khoa học, tăng cơ hoặc giữ dáng. 
+                Bao gồm thông tin dinh dưỡng và thời gian ăn hợp lý.
+                <br><br>
+                <span class="go-link">Đi đến trang<i class="fas fa-arrow-right"></i></span>
+            </p>
+            </div>
+            <div class="box1" onclick="window.location.href='fitness.html'">
+                <i class="fas fa-dumbbell"></i>
+                <h2>Fitness</h2>
+                <p>Bài tập tại nhà hoặc phòng gym được cá nhân hóa theo mục tiêu và thể trạng. 
+                Có video minh họa và lịch tập theo tuần.
+                <br><br>
+                <span class="go-link">Đi đến trang<i class="fas fa-arrow-right"></i></span>
+            </p>
+            </div>
+            <div class="box1" onclick="window.location.href='suckhoe.html'">
+                <i class="fas fa-heartbeat"></i>
+                <h2>Theo dõi sức khỏe</h2>
+                <p>Theo dõi cân nặng, lượng nước, nhịp tim và mức độ vận động mỗi ngày. 
+                Ghi lại chỉ số sức khỏe định kỳ để theo dõi tiến bộ.<br><br>
+                <span class="go-link">Đi đến trang<i class="fas fa-arrow-right"></i></span></p>
+            </div>
+        </div>
+
+        <div class="motivate-content">
+            <div class="motivate-animations">
+                <dotlottie-player
+                src="https://lottie.host/1718bfd4-d6c7-43b9-b655-a85ca17286d0/WjK7Tibg0s.json"
+                background="transparent"
+                speed="1"
+                style="width: 260px; height: 260px"
+                loop
+                autoplay
+                ></dotlottie-player>
+
+                <dotlottie-player
+                src="https://lottie.host/752cbcb2-91e5-46f6-b4d9-3a5ca0b8a835/auiaFTItYZ.lottie"
+                background="transparent"
+                speed="1"
+                style="width: 260px; height: 260px"
+                loop
+                autoplay
+                ></dotlottie-player>
+
+                <dotlottie-player
+                src="https://lottie.host/de82a2bf-9ebd-4845-b267-6e350579f893/rOh7XEHDb0.lottie"
+                background="transparent"
+                speed="1"
+                style="width: 260px; height: 260px"
+                loop
+                autoplay
+                ></dotlottie-player>
+            </div>
+        </div>
+    </section>
+
+    <section class="about hidden">
+        <h1 class="heading">Tại sao phải chăm sóc sức khỏe?</h1>
+        <div class="row row1">
+            <div class="left">
+                <img src="img/pic1.jpg" alt="">
+            </div>
+            <div class="right">
+                <h1 id="aboutTyping"></h1>
+                <p>Sức khỏe không chỉ là không bệnh, mà là trạng thái sống trọn vẹn cả về thể chất, tinh thần và cảm xúc.  
+                Chúng tôi tin rằng chăm sóc sức khỏe nên bắt đầu từ những hành động nhỏ mỗi ngày: ăn uống lành mạnh, vận động đều đặn và lắng nghe cơ thể mình.</p>
+
+                <p>Chăm sóc sức khỏe không chỉ là bảo vệ cơ thể khỏi những tác nhân bên ngoài mà còn là củng cố sức mạnh nội tại. Một hệ miễn dịch khỏe mạnh, được vun đắp từ chế độ dinh dưỡng cân bằng và lối sống tích cực, sẽ giúp chúng ta chống lại bệnh tật hiệu quả hơn. Không chỉ vậy, nó còn giúp chúng ta đối phó với những căng thẳng, áp lực trong cuộc sống một cách bình tĩnh và lạc quan.</p>
+                <button class="btn btn3" onclick="window.open('https://vi.phongnhaexplorer.com/hoi-dap/suc-khoe/tai-sao-can-cham-soc-suc-khoe.html#gsc.tab=0', '_blank')">Tìm hiểu thêm</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="quality">
+        <h1 class="heading">Tại sao bạn nên chọn dịch vụ của chúng tôi</h1>
+        <div class="row">
+            <div class="box2">
+                <i class="fas fa-user-plus"></i>
+                <h2>Hỗ trợ quý khách 24/7</h2>
+                <p>Đội ngũ luôn sẵn sàng hỗ trợ bạn mọi lúc, mọi nơi – cả khi bạn cần tư vấn đột xuất.</p>
+            </div>
+            <div class="box2">
+                <i class="fas fa-hand-holding-heart"></i>
+                <h2>Chăm sóc toàn diện</h2>
+                <p>Từ chế độ ăn uống, tập luyện đến theo dõi sức khỏe – tất cả đều tích hợp trong một ứng dụng.</p>
+            </div>
+            <div class="box2">
+                <i class="fas fa-award"></i>
+                <h2>Đảm bảo chất lượng</h2>
+                <p>Được xây dựng bởi đội ngũ chuyên gia y tế & huấn luyện viên uy tín, cập nhật theo tiêu chuẩn mới nhất.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="inspiration">
+        <div class="call-to-action">
+            <h2>Cùng nhau cải thiện và nâng cao sức khỏe mỗi ngày!</h2>
+            <p>Chúng tôi đồng hành cùng bạn trên hành trình sống khỏe, đẹp và hạnh phúc.</p>
+            <img src="img/healthy-lifestyle.jpg" alt="Healthy Lifestyle" class="cta-img">
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer id="contact">
+        <div class="footer-sec">
+            <div class="f_box">
+                <h2>Liên hệ</h2>
+                <p><a href="mailto:your@email.com">
+                    <i class="fas fa-envelope"></i> your@email.com
+                </a></p>
+
+                <p><a href="https://facebook.com" target="_blank">
+                    <i class="fab fa-facebook-f"></i> Facebook
+                </a></p>
+
+                <p><a href="https://youtube.com" target="_blank">
+                    <i class="fab fa-youtube"></i> YouTube
+                </a></p>
+
+                <p><a href="https://twitter.com" target="_blank">
+                    <i class="fab fa-twitter"></i> Twitter
+                </a></p>
+            </div>
+
+
+            <div class="f_box">
+                <h2>Dịch vụ</h2>
+                <p><a href="chedoan.html">Chế độ ăn uống</a></p>
+                <p><a href="fitness.html">Fitness</a></p>
+                <p><a href="suckhoe.html">Theo dõi sức khỏe</a></p>
+            </div>
+
+
+            <div class="f_box">
+            <h2>Địa chỉ</h2>
+            <p>Đường ABC, TP.HCM</p>
+            <p>
+                <a href="https://www.google.com/maps/place/Quận+12,+Thành+phố+Hồ+Chí+Minh" target="_blank" title="Xem trên Google Maps">
+                <i class="fas fa-map-marked-alt"></i>
+                </a>
+            </p>
+            </div>
+        </div>
+
+        <a href="thanhvien.html" style="color: white;text-decoration: none;"><p class="para">© 2025 Sức Khỏe & Thể Hình</p></a>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js@1.12.0"></script>
+    <script src="script.js"></script>
+    <script src="userSession.js"></script>
+    <div id="toast" class="toast"></div>
+</body>
+</html>

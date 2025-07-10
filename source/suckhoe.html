@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theo dõi tình trạng sức khỏe</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon_io/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon_io/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/favicon_io/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="img/favicon_io/android-chrome-512x512.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon_io/apple-touch-icon.png">
+    <link rel="manifest" href="img/favicon_io/site.webmanifest">
+    <link rel="stylesheet" href="suckhoe.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" 
+    integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js@1.12.0/src/toastify.min.css">
+</head>
+<body>
+    <section class="background">
+        <nav class="navbar">
+            <a href="#" class="logo"><img src="img/logo.png" alt=""></a>
+            <div class="burger" onclick="toggleMenu()">☰</div>
+            <div class="navbar-items h-class">
+                <ul class="nav v-class">
+                    <li><a href="index.html">TRANG CHỦ</a></li>
+                    <li><a href="chedoan.html">CHẾ ĐỘ ĂN</a></li>
+                    <li><a href="fitness.html">FITNESS</a></li>
+                    <li><a href="suckhoe.html">SỨC KHỎE<Em></Em></a></li>
+                    <li><a href="#contact">LIÊN HỆ</a></li>
+                    <li><a href="login.html" id="loginNav">ĐĂNG NHẬP</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- _________main-sec -->
+            <div class="main">
+                <div class="text-box">
+                    <h1>Chăm Sóc Sức Khỏe Toàn Diện Cùng FitLife</h1>
+                    <p>FitLife đồng hành cùng bạn trên hành trình xây dựng lối sống lành mạnh. 
+                    Từ luyện tập, dinh dưỡng đến sức khỏe tinh thần – mọi khía cạnh đều được kết nối 
+                    để bạn khỏe hơn mỗi ngày!</p>
+                    <a href="#infor-more" class="btn btn1">Khám phá ngay</a>
+                </div>
+
+                <div class="lottie-box">
+                <dotlottie-player
+                src="https://lottie.host/0f700c27-2e6f-4ed7-aa6b-679de4f6560e/B4Js9gpvip.lottie"
+                background="transparent"
+                speed="1"
+                style="width: 360px; height: 360px"
+                loop
+                autoplay
+                ></dotlottie-player>
+                </div>
+            </div>
+    </section>
+
+    <section class="health-intro" id="infor-more">
+        <div class="intro-container">
+            <!-- Bên trái: hình ảnh -->
+            <div class="img-box">
+                <img src="img/suckhoe/yoga.jpg" alt="Sức khỏe toàn diện">
+            </div>
+
+            <!-- Bên phải: nội dung -->
+            <div class="intro-text">
+                <h2>Sức khỏe toàn diện là gì?</h2>
+                <p>
+                    Sức khỏe không đơn thuần là việc cơ thể không mắc phải bất kỳ bệnh tật hay ốm đau nào. Định nghĩa này, tuy phổ biến, nhưng chưa phản ánh đầy đủ bản chất phức tạp và toàn diện của sức khỏe. Theo Tổ chức Y tế Thế giới (WHO), sức khỏe thực sự là một trạng thái thoải mái toàn diện về thể chất, tinh thần và xã hội. Điều này có nghĩa là để được xem là khỏe mạnh, một người cần cảm thấy tốt về cơ thể mình, có một tâm trí minh mẫn, và có khả năng tương tác tích cực với cộng đồng xung quanh.<br><br>
+                    Để đạt được điều đó, bạn cần kết hợp chế độ ăn lành mạnh, vận động đều đặn, ngủ đủ giấc và giữ tinh thần tích cực mỗi ngày.
+                </p>
+                <div class="intro-links">
+                    <a href="https://medlatec.vn/tin-tuc/goi-y-thuc-don-an-uong-khoa-hoc-moi-ngay-giup-co-the-khoe-manh-s51-n29671" class="btn btn1" target="_blank">Chế độ ăn</a>
+                    <a href="https://hebemart.vn/blogs/goc-suc-khoe/loi-ich-cua-viec-choi-the-thao" class="btn btn1" target="_blank">Vận động</a>
+                    <a href="https://www.vinmec.com/vie/bai-viet/20-cach-don-gian-de-ngu-nhanh-va-sau-vi" class="btn btn1" target="_blank">Giấc ngủ</a>
+                    <a href="https://hellobacsi.com/tam-ly-tam-than/moi-quan-he/suc-khoe-tinh-than/" class="btn btn1" target="_blank">Tinh thần</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="health-form-section">
+        <h2>Theo dõi huyết áp và nhịp tim</h2>
+        <form id="health-form" class="health-form">
+            <div class="form-group">
+                <label for="systolic">Huyết áp trên (mmHg):</label>
+                <input type="number" id="systolic" name="systolic" required>
+            </div>
+            <div class="form-group">
+                <label for="diastolic">Huyết áp dưới (mmHg):</label>
+                <input type="number" id="diastolic" name="diastolic" required>
+            </div>
+            <div class="form-group">
+                <label for="heart_rate">Nhịp tim (bpm):</label>
+                <input type="number" id="heart_rate" name="heart_rate" required>
+            </div>
+        <button type="submit" class="btn-submit">Lưu thông tin</button>
+        <div id="health-message" class="health-message"></div>
+        </form>
+        <a href="health_progress.php" target="_blank" class="view-health-link">
+        ❤️ Xem bảng thống kê tuần này
+        </a>
+    </section>
+
+    <section class="health-factors">
+        <h1 class="heading">Các yếu tố cấu thành sức khỏe</h1>
+        <div class="factors-grid">
+            <div class="factor-box nutrition" onclick="window.open('https://medlatec.vn/tin-tuc/dinh-duong-la-gi-vai-tro-cua-cac-duong-chat-doi-voi-co-the-s51-n32943', '_blank')">
+                <i class="fas fa-apple-alt"></i>
+                <h3>Dinh dưỡng</h3>
+            </div>
+            <div class="factor-box exercise" onclick="window.open('https://pacificcross.com.vn/vi/loi-ich-cua-van-dong-the-luc/', '_blank')">
+                <i class="fas fa-dumbbell"></i>
+                <h3>Vận động</h3>
+            </div>
+            <div class="factor-box sleep" onclick="window.open('https://vnexpress.net/10-loi-ich-khi-ngu-du-giac-4544970.html', '_blank')">
+                <i class="fas fa-bed"></i>
+                <h3>Giấc ngủ</h3>
+            </div>
+            <div class="factor-box mental" onclick="window.open('https://tamly.com.vn/suc-khoe-tinh-than-2431.html', '_blank')">
+                <i class="fas fa-brain"></i>
+                <h3>Tinh thần</h3>
+            </div>
+            <div class="factor-box water" onclick="window.open('https://www.vinmec.com/vie/bai-viet/loi-ich-cua-viec-uong-du-nuoc-vi', '_blank')">
+                <i class="fas fa-tint"></i>
+                <h3>Uống nước</h3>
+            </div>
+            <div class="factor-box avoid" onclick="window.open('https://suckhoedoisong.vn/40-thoi-quen-xau-co-hai-cho-suc-khoe-169106100.htm', '_blank')">
+                <i class="fas fa-ban"></i>
+                <h3>Tránh thói quen xấu</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="health-checklist">
+        <h1 class="heading">Checklist sống khỏe mỗi ngày</h1>
+
+        <div class="checklist-chart-wrapper">
+            <!-- Bên trái: Checklist -->
+            <ul class="checklist">
+            <li><i class="fas fa-check-circle"></i> Uống đủ 2L nước</li>
+            <li><i class="fas fa-check-circle"></i> Tập thể dục ít nhất 30 phút</li>
+            <li><i class="fas fa-check-circle"></i> Ăn nhiều rau xanh, trái cây</li>
+            <li><i class="fas fa-check-circle"></i> Ngủ đủ 7–8 tiếng</li>
+            <li><i class="fas fa-check-circle"></i> Tránh stress, giữ tinh thần tích cực</li>
+            </ul>
+
+            <!-- Bên phải: Biểu đồ -->
+            <div class="chart-area">
+                <h3>Tỉ lệ các yếu tố ảnh hưởng sức khỏe</h3>
+                <canvas id="healthChart" width="300" height="300"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <section class="harmful-foods">
+        <h1 class="heading">Những thói quen và thực phẩm gây hại cho sức khỏe</h1>
+        
+        <div class="harmful-content">
+            <!-- Bên trái: ảnh + nút điều hướng -->
+            <div class="harmful-left">
+                <div class="image-container">
+                    <img src="img/suckhoe/harmful/fastfood.jpg" alt="Harmful item" id="harmful-img">
+                    <div class="image-controls">
+                        <button id="prev-harmful">&lt;</button>
+                        <span id="harmful-title">Đồ ăn nhanh</span>
+                        <button id="next-harmful">&gt;</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bên phải: mô tả -->
+            <div class="harmful-right">
+                <h1 id="harmful-heading">Đừng lạm dụng thức ăn nhanh</h1>
+                <p id="harmful-desc">
+                    Thức ăn nhanh chứa nhiều chất béo bão hòa, muối và đường. Việc tiêu thụ thường xuyên có thể làm tăng nguy cơ béo phì, tim mạch và tiểu đường.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="health-inspire">
+        <div class="inspire-box">
+            <h2>“Sức khỏe là món quà vô giá – hãy trân trọng và nuôi dưỡng nó mỗi ngày.”</h2>
+            <p>Hành trình sống khỏe bắt đầu từ những thay đổi nhỏ. Hãy kiên trì – vì chính bạn!</p>
+            <div class="btn-links">
+                <a href="chedoan.html" class="btnx btnx1">Chế độ ăn</a>
+                <a href="fitness.html" class="btnx btnx2">Tập luyện</a>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="inspiration">
+        <div class="call-to-action">
+            <h2>Cùng nhau cải thiện và nâng cao sức khỏe mỗi ngày!</h2>
+            <p>Chúng tôi đồng hành cùng bạn trên hành trình sống khỏe, đẹp và hạnh phúc.</p>
+            <img src="img/healthy-lifestyle.jpg" alt="Healthy Lifestyle" class="cta-img">
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer id="contact">
+        <div class="footer-sec">
+            <div class="f_box">
+                <h2>Liên hệ</h2>
+                <p><a href="mailto:your@email.com">
+                    <i class="fas fa-envelope"></i> your@email.com
+                </a></p>
+
+                <p><a href="https://facebook.com" target="_blank">
+                    <i class="fab fa-facebook-f"></i> Facebook
+                </a></p>
+
+                <p><a href="https://youtube.com" target="_blank">
+                    <i class="fab fa-youtube"></i> YouTube
+                </a></p>
+
+                <p><a href="https://twitter.com" target="_blank">
+                    <i class="fab fa-twitter"></i> Twitter
+                </a></p>
+            </div>
+
+
+            <div class="f_box">
+                <h2>Dịch vụ</h2>
+                <p><a href="chedoan.html">Chế độ ăn uống</a></p>
+                <p><a href="fitness.html">Fitness</a></p>
+                <p><a href="suckhoe.html">Theo dõi sức khỏe</a></p>
+            </div>
+
+
+            <div class="f_box">
+            <h2>Địa chỉ</h2>
+            <p>Đường ABC, TP.HCM</p>
+            <p>
+                <a href="https://www.google.com/maps/place/Quận+12,+Thành+phố+Hồ+Chí+Minh" target="_blank" title="Xem trên Google Maps">
+                <i class="fas fa-map-marked-alt"></i>
+                </a>
+            </p>
+            </div>
+        </div>
+
+       <a href="thanhvien.html" style="color: white;text-decoration: none;"><p class="para">© 2025 Sức Khỏe & Thể Hình</p></a>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const inspireSection = document.querySelector(".health-inspire");
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+                observer.unobserve(entry.target);
+            }
+            });
+        }, { threshold: 0.3 });
+
+        if (inspireSection) observer.observe(inspireSection);
+
+        // 💡 QUAN TRỌNG: đặt phần xử lý form ở đây
+        const form = document.getElementById("health-form");
+        if (form) {
+            form.addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            const systolic = parseInt(document.getElementById("systolic").value);
+            const diastolic = parseInt(document.getElementById("diastolic").value);
+            const heartRate = parseInt(document.getElementById("heart_rate").value);
+            const messageBox = document.getElementById("health-message");
+
+            if (
+                systolic <= 0 || systolic > 250 ||
+                diastolic <= 0 || diastolic > 150 ||
+                heartRate <= 0 || heartRate > 200
+            ) {
+                messageBox.style.color = "red";
+                messageBox.textContent = "Vui lòng nhập các giá trị hợp lệ.";
+                return;
+            }
+
+            fetch("save_health.php", {
+                method: "POST",
+                headers: {
+                "Content-Type": "application/x-www-form-urlencoded"
+                },
+                body: new URLSearchParams({
+                systolic,
+                diastolic,
+                heart_rate: heartRate
+                })
+            })
+            .then(res => res.text())
+            .then(data => {
+                messageBox.style.color = "#1a92be";
+                messageBox.innerHTML = data;
+            })
+            .catch(() => {
+                messageBox.style.color = "red";
+                messageBox.textContent = "Lỗi khi kết nối máy chủ.";
+            });
+            });
+        }
+        });
+
+    </script>
+    <script src="auth.js"></script>
+    <script src="userSession.js"></script>
+    <script src="suckhoe.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js@1.12.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>
